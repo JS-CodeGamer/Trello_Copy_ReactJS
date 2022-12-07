@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+header {
+  color: #fff;
+  display: flex;
+  background-color: #004269;
+  height: 44px;
+  padding: 6px 4px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* z-index: 9999; */
+  align-items: center;
+  justify-content: space-between; 
+}
+
+button {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+button .icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+
+.icons {
+  width: 10px;
+  margin-left: 6px;
+}
+
+.leftnav{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rightnav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left:first-of-type{
+  padding: 0 12px;
+}
+
+.left{
+  padding: 0 12px;
+  display: inline-flex;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  height: 32px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+.trello {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+.search{
+  position: relative;
+  margin-right: 8px;
+}
+
+.search input {
+  width: 250px;
+  height: 32px;
+  border: 1px solid hsla(0,0%,100%,.25);
+  border-radius: 3px;
+  background-color: hsla(0,0%,100%,.3);
+  color: hsla(0,0%,100%,.5);
+  padding-left: 30px;
+  outline: none;
+}
+
+.search span {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  color: hsla(0,0%,100%,.8);
+}
+
+.search ::placeholder {
+  color: #fff;
+}
+
+.qk {
+  display: flex;
+  color: #172b4d;
+  background-color: #dfe1e6;
+  height: 32px;
+  width: 32px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.qk p{
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+div .create{
+  width: max-content;
+  color: #fff;
+  font-size: 14px;
+  background-color: rgba(0,0,0,.24);
+  /* padding: 0 12px; */
+  margin-left: 12px;
+}
+
+/* div .create:hover{
+  background-color: ;
+} */
+
+div .hove:hover{
+  background-color: #eeeeee63;
+  border-radius: 3px;
+}
