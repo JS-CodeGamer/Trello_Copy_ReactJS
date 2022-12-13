@@ -1,6 +1,5 @@
 import React from 'react'
 import Fuctions from './fuctions'
-import Todolist from './Todolist'
 
 const Main = () => {
   return (
