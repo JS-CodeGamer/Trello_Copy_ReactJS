@@ -76,6 +76,12 @@ div main{
   /* padding-right: 10px; */
 }
 
+.tobedec{
+  width:auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .thiswritten{
   margin: 0;
   font-size: 14px;
@@ -85,12 +91,13 @@ div main{
 }
 
 .learn{
+  width: 120px;
   font-size: 14px;
   color: #6b778c;
   font-weight: 400;
   text-decoration: underline;
   margin-left: 10px;
-  cursor: auto;
+  cursor: pointer;
 }
 
 .thisboard .material-icons{
