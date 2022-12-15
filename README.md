@@ -1,8 +1,10 @@
-# Trello_Copy_ReactJS
+# [Trello_Copy_ReactJS](https://js-codegamer.github.io/Trello_Copy_ReactJS/)
 
 This project was created when I was leaning about React-Beautiful-DND and just has functionality of Drag and Drop with an ability to create new cards.
 
-This project is hosted at https://js-codegamer.github.io/Project-Blogs-UI/ please check it out.
+This project is hosted at https://js-codegamer.github.io/Trello_Copy_ReactJS/ please check it out.
+
+## Available Scripts:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) hence the following scripts are available after cloning: 
 
