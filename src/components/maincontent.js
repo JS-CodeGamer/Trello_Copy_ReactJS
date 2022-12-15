@@ -1,5 +1,5 @@
 import React from 'react'
-import Listing from './main'
+import Listings from './listings'
 
 const MainContent = () => {
     return (
@@ -7,14 +7,13 @@ const MainContent = () => {
             <main>
                 <section>
                     <div className="thisboard">
-                        <div className="tobedec">
+                        <div>
                             <img src="https://trello-replica.web.app/static/media/earth_green.f5dba22e.svg" alt="" />
                             <span className="thiswritten">This board is set to public. Board admins can change its visibility setting at any time.</span>
                             <button className="learn">Learn more here</button>
                         </div>
                         <span className="material-icons"></span>
                     </div>
-
                     <div className="topmain">
                         <div className="kanban">
                             <h1>Kanban Board</h1>
@@ -29,8 +28,7 @@ const MainContent = () => {
                             <div className="saparator"></div>
                             <span className="ah">AH</span>
                         </div>
-
-                        <Listing/>
+                        <Listings/>
                     </div>
                 </section>
             </main>

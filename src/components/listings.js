@@ -1,53 +1,50 @@
 import React, { useState } from 'react'
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
-import './Todolist.css'
+import './Listing.css'
 
-const Listing = () => {
+const Listings = () => {
 
     const [lists,setLists] = useState({
-        '1671039895436': {title:'To Do',
-                    items:{'1671039895442':'Helpdesk Call BB999',
-                            '1671039895443':'Helpdesk Call AA999'},
+        '1671110904481': {title:'To Do',
+                    items:{'1671110940450':'Helpdesk Call BB999',
+                            '1671110940451':'Helpdesk Call AA999'},
                     check: false
                 } ,
-        '1671039895438': {title:'Development',
-                    items:{'1671039895444':'Helpdesk Call CC999',
-                            '1671039895445':'Helpdesk Call EE999'},
+        '1671110904482': {title:'Development',
+                    items:{'1671110940452':'Helpdesk Call CC999',
+                            '1671110940453':'Helpdesk Call EE999'},
                     check: false
                 } ,
-        '1671039895440': {title:'Testing',
-                    items:{'1671039895446':'Helpdesk Call DD999'},
+        '1671110904483': {title:'Testing',
+                    items:{'1671110940454':'Helpdesk Call DD999'},
                     check: false
                 } ,
-        '1671039895441': {title:'Done',
-                    items:{'1671039895447':'Helpdesk Call GG999',
-                            '1671039895448':'Helpdesk Call FF999'},
+        '1671110904484': {title:'Done',
+                    items:{'1671110940455':'Helpdesk Call GG999',
+                            '1671110940456':'Helpdesk Call FF999'},
                     check: false
                 }
         })
 
-        // Add New List
-        const [showNewListForm, setshowNewListForm] = useState(false)
-        const [newListTitle, setnewListTitle] = useState('')
-        const toggleNewListForm = () => {
+        // Add New Item to a list
+        const [showNewListForm, setshowNewListForm] = useState(false);
+        const [newListTitle, setnewListTitle] = useState("");
+        const toggleNewListForm = (listID) =>{
             setshowNewListForm(!showNewListForm);
             setnewListTitle('');
         }
+
         const addNewList = (e) => {
             e.preventDefault()
             let newLists = {...lists};
-            newLists[`${Date.now()}`] = {
-                title: newListTitle,
-                items:{},
-                check:false
-            };
+            newLists[`${Date.now()}`] = {title:newListTitle, items:{}, check:false};
             setLists(newLists);
             toggleNewListForm();
         }
 
         // Add New Item to a list
         const [newItemContent, setNewItemContent] = useState("");
-        const toggleNewItemForm = (listID) => {
+        const toggleNewItemForm = (listID) =>{
             let newLists = {...lists};
             newLists[listID].check=!lists[listID].check;
             setLists(newLists);
@@ -79,13 +76,14 @@ const Listing = () => {
             }
         }
 
+
     return (
     <div className='listing'>
         <DragDropContext onDragEnd={onDragEnd}>
         {Object.entries(lists).map(
             ([listID,list])=>
                 <Droppable droppableId={listID}>
-                    { provided =>
+                    { provided=>
                         <div
                             className="maincontent"
                             key={listID}
@@ -99,10 +97,10 @@ const Listing = () => {
 
                                 <div className="listname" >
                                     {Object.entries(list.items).map(
-                                        ([itemID, itemContent], index) =>
+                                        ([itemID, itemContent]) =>
                                             <Draggable
                                                 key={itemID}
-                                                index={index}
+                                                index={parseInt(itemID.slice(-1))}
                                                 draggableId={itemID}
                                             >
                                             {provided =>
@@ -121,11 +119,10 @@ const Listing = () => {
                                 </div>
 
                             {list.check? 
-                                <form className='cardname' onSubmit={e => addItemToList(e, listID)}>
+                                <form className='cardname' onSubmit={(e)=>addItemToList(e, listID)}>
                                     <input
-                                        type="text"
                                         autoFocus
-                                        placeholder='Enter a title for this card...'
+                                        type="text" placeholder='Enter a title for this card...'
                                         onChange={(e)=>setNewItemContent(e.target.value)}
                                     />
                                     <div className='addcardinput'>
@@ -150,24 +147,23 @@ const Listing = () => {
 
         {showNewListForm?
             <div className="newlist" style={{background:'#fff'}}>
-            <form className='cardname' onSubmit={e => addNewList(e)}>
+            <form className='cardname' onSubmit={(e)=>addNewList(e)}>
                 <input
-                    type="text"
                     autoFocus
-                    placeholder='Add list title...'
+                    type="text" placeholder='Add list title...'
                     onChange={(e)=>setnewListTitle(e.target.value)}
                 />
                 <div className='addcardinput'>
-                    <button type='submit'>
+                    <button>
                         <p>Add list</p>
                     </button>
-                    <span onClick={() => toggleNewListForm()} className="material-icons"></span>
+                    <span onClick={()=> toggleNewListForm()} className="material-icons"></span>
                 </div>
             </form>
             </div>
             :
             <div className="newlist">
-            <div className="addlist" onClick={() => toggleNewListForm()}>
+            <div className="addlist" onClick={ ()=> toggleNewListForm() }>
                 <span className="material-icons"></span>
                 <p>Add another list</p>
             </div>
@@ -177,4 +173,4 @@ const Listing = () => {
     )
 }
 
-export default Listing
+export default Listings
