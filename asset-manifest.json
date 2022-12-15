@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/trello_copy_reactjs/static/css/main.6b71e699.css",
-    "main.js": "/trello_copy_reactjs/static/js/main.b34ee4f5.js",
-    "static/js/787.98bb6e72.chunk.js": "/trello_copy_reactjs/static/js/787.98bb6e72.chunk.js",
-    "index.html": "/trello_copy_reactjs/index.html",
-    "main.6b71e699.css.map": "/trello_copy_reactjs/static/css/main.6b71e699.css.map",
-    "main.b34ee4f5.js.map": "/trello_copy_reactjs/static/js/main.b34ee4f5.js.map",
-    "787.98bb6e72.chunk.js.map": "/trello_copy_reactjs/static/js/787.98bb6e72.chunk.js.map"
+    "main.css": "/Trello_Copy_ReactJS/static/css/main.41470910.css",
+    "main.js": "/Trello_Copy_ReactJS/static/js/main.9e1d0348.js",
+    "static/js/787.98bb6e72.chunk.js": "/Trello_Copy_ReactJS/static/js/787.98bb6e72.chunk.js",
+    "index.html": "/Trello_Copy_ReactJS/index.html",
+    "main.41470910.css.map": "/Trello_Copy_ReactJS/static/css/main.41470910.css.map",
+    "main.9e1d0348.js.map": "/Trello_Copy_ReactJS/static/js/main.9e1d0348.js.map",
+    "787.98bb6e72.chunk.js.map": "/Trello_Copy_ReactJS/static/js/787.98bb6e72.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b71e699.css",
-    "static/js/main.b34ee4f5.js"
+    "static/css/main.41470910.css",
+    "static/js/main.9e1d0348.js"
   ]
 }
